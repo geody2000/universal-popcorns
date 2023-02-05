@@ -5,6 +5,7 @@ html, body {
 body {
   max-width: 1500px;
   margin: 0 auto;
+  padding: 10px;
   font-family: Calibri;
   font-size: 17px;
   color: white;
