@@ -85,7 +85,7 @@ var shouldOptions =
 "sculpt my marbles or lose my marbles?", 
 "ever stop asking questions?", 
 "join a brass band on a whim?", 
-"Linux as a prank?", 
+"install Linux as a prank?", 
 "sail across the Seven Seas?",  
 "swing with a lot of zing?", 
 "hide from the crowds of my myriad fans?", 
