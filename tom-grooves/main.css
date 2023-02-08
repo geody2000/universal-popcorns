@@ -28,12 +28,12 @@ h3 {
 
 /* unvisited link */
 a:link {
-  color: white;
+  color: orange;
 }
 
 /* visited link */
 a:visited {
-  color: orange;
+  color: green;
 }
 
 /* mouse over link */
