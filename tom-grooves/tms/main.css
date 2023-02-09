@@ -104,6 +104,15 @@ a:active {
   text-align: center;
 }
 
+#archie_boy_img {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  width: 25%;
+
+}
+
 .Pooplord_container {
   display: flex;
   margin-top: 20px;
@@ -111,7 +120,8 @@ a:active {
   border-style: solid;
   border-width: 1px;
   border-color: white;
-  background-color: #4A3D53; 
+  background-color: #4A3D53;
+  overflow: hidden;
 }
 
 .Pooplord_container_text {
@@ -126,7 +136,8 @@ a:active {
   border-style: solid;
   border-width: 1px;
   border-color: white; 
-  background-color: #223320;  
+  background-color: #223320; 
+  overflow: hidden;
 }
 
 .Scott-Cornman_container_text {
@@ -141,7 +152,8 @@ a:active {
   border-style: solid;
   border-width: 1px;
   border-color: white;
-  background-color: #3F3A2B;  
+  background-color: #3F3A2B;
+  overflow: hidden;
 }   
 
 .Rupus_container_text {
@@ -157,6 +169,7 @@ a:active {
   border-width: 1px;
   border-color: white;
   background-color: #A4543A; 
+  overflow: hidden;
 }   
 
 .Flarglin_container_text {
@@ -172,6 +185,7 @@ a:active {
   border-width: 1px;
   border-color: white;
   background-color: #10183D;
+  overflow: hidden;
 }
 
 .Pete_container_text {
@@ -187,6 +201,7 @@ a:active {
   border-width: 1px;
   border-color: white;
   background-color: #401A1A; 
+  overflow: hidden;
 }
 
 .Archie_container_text {
@@ -202,6 +217,7 @@ a:active {
   border-width: 1px;
   border-color: white;
   background-color: #34005F;  
+  overflow: hidden;
 }   
 
 .Rob_container_text {
@@ -217,6 +233,7 @@ a:active {
   border-width: 1px;
   border-color: white;
   background-color: #1A1F40;
+  overflow: hidden;
 }   
 
 .Richie_container_text {
@@ -232,6 +249,7 @@ a:active {
   border-width: 1px;
   border-color: white;
   background-color: #2B1A05;   
+  overflow: hidden;
 }   
 
 .Tom_container_text {
