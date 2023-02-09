@@ -10,7 +10,7 @@ body {
 	font-family: Arial, Tahoma, sans-serif;
 	font-size: 1em;
 	color: #EB6A3C;
-	overflow-wrap: break-word;
+	overflow-wrap: anywhere;
 }
 
 h1 {
@@ -311,6 +311,7 @@ fieldset {
 
 .ask_tom_contact_form {
   margin-bottom: 50px;
+  overflow: hidden;
 }
 
 .footer {
