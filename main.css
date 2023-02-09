@@ -42,8 +42,12 @@ a:hover {
   color: red;
 }
 
+.top-header-container {
+  margin-bottom: 20px;
+}
+
 .top-header {
-font-size: 1.2em;
+font-size: 1.2rem;
 font-family: 'BungeeSpice-Regular';
 }
 
@@ -56,7 +60,7 @@ font-family: 'BungeeSpice-Regular';
 
 .top-header li {
   float: left;
-  margin-top: 1em;
+  margin-top: 1rem;
 }
 
 .top-header li a {
@@ -64,7 +68,7 @@ font-family: 'BungeeSpice-Regular';
   text-align: center;
   padding: 7px 8px;
   text-decoration: none;
-  font-size: 1em;
+  font-size: 1.5rem;
 }
 
 .top-header li a:hover {
@@ -74,7 +78,6 @@ font-family: 'BungeeSpice-Regular';
 .top-header .active {
   background-color: white;
 }
-
 
 .universal-popcorns-image-container {
 display: flex;
@@ -93,11 +96,11 @@ height: 780px;
 }
 
 .universal-popcorns-anthem h2 {
-  font-size: 4em;
+  font-size: 4rem;
   }
 
 .universal-popcorns-anthem p {
-font-size: 3em;
+font-size: 3rem;
 }
 
 .flex-container {
