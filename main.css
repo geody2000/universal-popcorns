@@ -82,7 +82,8 @@ justify-content: center;
 }
 
 #universal-popcorns-image {
-max-width: 100%;
+width: 720px;
+height: 780px;
 }
  
 .universal-popcorns-anthem {
