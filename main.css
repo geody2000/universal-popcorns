@@ -82,7 +82,7 @@ justify-content: center;
 }
 
 #universal-popcorns-image {
-width: 40%;
+max-width: 100%;
 }
  
 .universal-popcorns-anthem {
@@ -118,6 +118,6 @@ font-size: 3em;
 }
 
 .flex-item img {
-  max-width: 500px;
-  width: 100%;
+  max-width: 100%;
+  width: 500px;
 }
