@@ -8,4 +8,17 @@
   src: url(google/ReenieBeanie-Regular.woff2) format('woff2');
 }
 
+@font-face {
+  font-family: 'Pacifico-Regular';
+  src: url(google/Pacifico-Regular.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'NanumPenScript-Regular';
+  src: url(google/NanumPenScript-Regular.woff2) format('woff2');
+}
+
+
+
+
 

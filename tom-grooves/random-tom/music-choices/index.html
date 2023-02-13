@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<title>Music Choices</title>  
+
+<meta name="description" content="Tom's random tools.">
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" type="text/css" href="../../main.css">
+
+<link rel="stylesheet" type="text/css" href="../../../fonts/fonts.css">
+
+<link rel="shortcut icon" type="image/x-icon" href="../../favicons/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="../../favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../favicons/favicon-16x16.png">
+<link rel="manifest" href="../../favicons/site.webmanifest">
+
+<style>
+
+	button {
+			color: #ffffff;
+			background-color: #2d63c8;
+			border: 1px solid #2d63c8;
+      border-radius: 50%;
+			padding: 15px 50px;
+			cursor: pointer;
+      margin: 20px;
+      font-family: 'NanumPenScript-Regular';
+      font-size: 2em;
+      
+		}
+		button:hover {
+			color: #2d63c8;
+			background-color: #ffffff;
+		}
+
+  #key-picker {
+    border-style: groove;
+    border-width: 10px;
+    border-color: red;
+    padding: 10px;
+    background-color: orange;
+    color: black;
+    max-width: 50%;
+    font-family: 'Pacifico-Regular';
+    overflow: hidden;
+    margin-bottom: 50px;
+  }
+
+  #key-picker-sentence {
+    font-family: 'NanumPenScript-Regular';
+    font-size: 2em;
+  }
+
+  #tempo-picker {
+    border-style: dashed;
+    border-width: 10px;
+    border-color: white;
+    padding: 10px;
+    background-color: #663300;
+    color: yellow;
+    max-width: 50%;
+    font-family: 'Pacifico-Regular';
+    overflow: hidden;
+    margin-bottom: 50px;
+  }
+
+  #tempo-picker-sentence {
+    font-family: 'NanumPenScript-Regular';
+    font-size: 2em;
+  }
+</style>
+
+</head>
+
+<body>
+
+<h1 style="font-family: 'NanumPenScript-Regular'; font-size: 5rem;">Music Choices</h1>
+
+<div id="key-picker" class="center-div">
+
+<h2 class="left">Key Picker</h2>
+  
+<button id="key-picker-generate">Generate</button>
+<div id="key-picker-sentence"></div>
+
+<script>
+  const keyPickerSentenceContainer = document.getElementById("key-picker-sentence");
+  const keyPickerGenerateButton = document.getElementById("key-picker-generate");
+
+  const keyPickerSentences = [
+    "I think you should pick the key of ",
+    "Try vamping in ",
+    "A fine choice would be ",
+    "I am feeling ",
+    "I say we go for ",
+    "I guess you could try playing in ",
+    "Grab your notation software and set the key to ",
+    "The answer is pretty obvious, you gotta choose ",
+    "Argh, uhm... That's a tough one. Okay okay, let's go with ",
+    "I was considering G mixolydian, but on second thought I prefer ",
+    "Hmm... It's been a while since you last wrote in the key of ",
+    "Don't be indecisive, just roll with ",
+    "What key is that song whose title I don't remember in? Ah yes, in ",
+    "A lot of pressure here. Alright. The answer is ",
+    "There is one key that unlocks the full potential of your brain, and it's ",
+    "Hard to decide, but you can't go wrong with ",
+    "Oh come on, everyone knows the best key is ",
+    "I believe the appropriate key for your next mangum opus is ",
+    "Just ask yourself, what key would Mozart pick? Mozart: ",
+    "Picking keys can be a big decision for people. Consult with your local musicologist before you pick ",
+    "I thought you'd never ask. ",
+    "Launch your DAW, change your current key immediately, and switch to ",
+    "All keys are good, except ",
+    "There are two choices. Either C major, or ",
+    "Plenty of potential candidates. Try the key of ",
+    "Pick all of them, except ",
+    "I think I told you, "
+  ];
+  
+  const keyPickerKeys = [
+    "C major.",
+    "Db major.",
+    "D major.",
+    "Eb major.",
+    "F major.",
+    "Gb major.",
+    "G major.",
+    "Ab major.",
+    "A major.",
+    "Bb major.",
+    "B major.",
+
+    "C minor.",
+    "C# minor.",
+    "D minor.",
+    "Eb minor.",
+    "E minor.",
+    "F minor.",
+    "F# minor.",
+    "G minor.",
+    "G# minor.",
+    "A minor.",
+    "Bb minor.",
+    "B minor."
+  ];
+  
+  keyPickerGenerateButton.addEventListener("click", function() {
+  let randomKeyPickerSentence = keyPickerSentences[Math.floor(Math.random() * keyPickerSentences.length)];
+  let randomKeyPickerKey = keyPickerKeys[Math.floor(Math.random() * keyPickerKeys.length)];
+  keyPickerSentenceContainer.innerHTML = randomKeyPickerSentence + " " + randomKeyPickerKey;
+});
+</script>
+
+</div>
+
+
+
+
+<div id="tempo-picker" class="center-div">
+
+<h2 class="left">Tempo Picker</h2>
+  
+<button id="tempo-picker-generate">Generate</button>
+<div id="tempo-picker-sentence"></div>
+
+<script>
+  const tempoPickerSentenceContainer = document.getElementById("tempo-picker-sentence");
+  const tempoPickerGenerateButton = document.getElementById("tempo-picker-generate");
+
+  const tempoPickerSentences = [
+    "An excellent choice would be ",
+    "It is time to go for ",
+    "The answer is ",
+    "I am feeling ",
+    "Your best bet is ",
+    "You gotta try ",
+    "I would say ",
+    "I recommend ",
+    "It should be the following tempo marking: ",
+    "Let's ask J.S. Bach.<br><br>J.S. Bach: ",
+    "Consider writing in the tempo of ",
+    "You want a great suggestion? ",
+    "If I were in your shoes, I would choose ",
+    "You have no choice but to write ",
+    "There is one clear winner: ",
+    "Let's see which tempo marking won the lottery: ",
+    "You know what? Be bold and pick ",
+    "Think no more, the right tempo is ",
+    "Oh, the answer is obvious: ",
+    "That is simple. ",
+    "I think maybe ",
+    "Whatever you do, don't pick ",
+    "Let me decide. Okay I decided. ",
+    "My current mood indicates ",
+    "Let me get my pal Beethoven real quick. Beethoven recommends ",
+    "Let me ask my assistant. What do you think, assistant?<br><br>Assistant: I pick ",
+    "The limit is your imagination. That said, ",
+    "This.<br>&darr;<br><br>",
+    "The following tempo should get the job done:"
+  ];
+  
+  const tempoPickerTempi = [
+	 
+"Larghissimo &mdash; very, very slow (24 bpm and under).",
+"Adagissimo &mdash; very slow (24-40 bpm).",
+"Grave &mdash; very slow and solemn (24&mdash;40  bpm).",
+"Largo &mdash; slow and broad (40&mdash;66  bpm).",
+"Adagio &mdash; slow with great expression (44&mdash;76 bpm).",
+"Larghetto &mdash; rather slow and broad (44&mdash;66 bpm).",
+"Adagietto &mdash; slower than andante or slightly faster than adagio (46&mdash;80  bpm).",
+"Lento &mdash; slow (52&mdash;108  bpm).",
+"Andante &mdash; at a walking pace, moderately slow (56&mdash;108 bpm).",
+"Andantino &mdash; slightly faster and sometimes slightly slower than andante (80&mdash;108 bpm).",
+"Marcia moderato &mdash; moderately, in the manner of a march (66&mdash;80 bpm).",
+"Andante moderato &mdash; between andante and moderato (at a moderate walking speed) (66&mdash;112 bpm).",
+"Moderato &mdash; at a moderate speed (66&mdash;126 bpm).",
+"Allegretto &mdash; moderately fast (76&mdash;120 bpm).",
+"Allegro moderato &mdash; close to, but not quite allegro (96&mdash;120 bpm).",
+"Allegro &mdash; fast and bright (100&mdash;156 bpm).",
+"Molto Allegro or Allegro vivace &mdash; very fast and bright (124&mdash;160 bpm).",
+"Vivace &mdash; lively and fast (124&mdash;160 bpm).",
+"Vivacissimo &mdash; very fast and lively (160&mdash;184 bpm).",
+"Allegrissimo &mdash; very fast and bright (160&mdash;184 bpm).",
+"Presto &mdash; very fast (168&mdash;200 bpm).",
+"Prestissimo &mdash; extremely fast (200 bpm and over)."
+
+  ];
+  
+  tempoPickerGenerateButton.addEventListener("click", function() {
+  let randomTempoPickerSentence = tempoPickerSentences[Math.floor(Math.random() * tempoPickerSentences.length)];
+  let randomTempoPickerKey = tempoPickerTempi[Math.floor(Math.random() * tempoPickerTempi.length)];
+  tempoPickerSentenceContainer.innerHTML = randomTempoPickerSentence + " " + randomTempoPickerKey;
+});
+</script>
+
+</div>
+
+</body>
+</html>
