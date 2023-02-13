@@ -160,21 +160,25 @@ fieldset {
 
 <h2>&#9836; Ask Tom &#9836;</h2>
 
-<p><small>(The following form doesn't work.)</small></p>
-
 <div class="ask_tom_contact_form">  
-	<form>
-	  <fieldset>
-		<input placeholder="Your fake name.">
-	  </fieldset>
-	  <fieldset>
-		  <input placeholder="Your groovy question.">
-	  </fieldset>
-	  <fieldset>
-		<button>Ask</button>
-	  </fieldset>
-	</form>
-  </div>
+
+<form
+  action="https://formspree.io/f/xyyaebrv"
+  method="POST"
+>
+<fieldset>
+  <label>
+    <input type="text" name="your-fake-name" placeholder="Your fake name.">
+  </label>
+</fieldset>
+<fieldset>
+  <label>
+    <textarea name="your-groovy-question"  placeholder="Your groovy question."></textarea>
+  </label>
+</fieldset>
+  <!-- your other form fields go here -->
+  <button type="submit">Ask</button>
+</form>
   
 <br>
 
