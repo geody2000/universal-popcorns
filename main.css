@@ -9,12 +9,34 @@ body {
   font-family: Calibri;
   font-size: 17px;
   color: white;
+  overflow-wrap: anywhere;
+}
+
+.wrapper-max-width {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.universal-popcorns-top-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-family: 'BungeeSpice-Regular';
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.universal-popcorns-top-title a {
+  text-decoration: none;
+}
+
+.back-arrow {
+  background-color: orange;
+  display: inline-block;
 }
 
 h1 {
   text-align: center;
   font-size: 2.5rem;
-  font-family: 'BungeeSpice-Regular';
 }
 
 h2 {

@@ -5,7 +5,11 @@
   <meta name="description" content="Tom's Music School is the number one choice of the fonky moosician.">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="main.css">
+
+  <link rel="stylesheet" href="../../main.css">
+
+  <link rel="stylesheet" type="text/css" href="../../fonts/fonts.css">
+  
   <link rel="shortcut icon" type="image/x-icon" href="../favicons/favicon.ico">
   <link rel="apple-touch-icon" sizes="180x180" href="../favicons/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="../favicons/favicon-32x32.png">
@@ -13,7 +17,239 @@
   <link rel="manifest" href="../favicons/site.webmanifest">
 </head>
 
+<style>
+body {
+  font-family: Arial, Tahoma, sans-serif;
+  color: #EB6A3C;
+  overflow-wrap: anywhere;
+}
+
+h1 {
+  font-family: Arial, Tahoma, sans-serif;
+  font-size: 1.5em;
+  color: #EB6A3C;
+}
+
+h2 {
+  font-size: 1.5em;
+  text-align: center;
+  color: #5DADEC; 
+}
+
+li {
+  margin-top: 1.3em;
+}
+
+.ul_header {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.li_header {
+  float: left;
+}
+
+.li_header a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 7px 8px;
+  text-decoration: none;
+  font-size: 0.8em;
+}
+
+.li_header a:hover {
+  background-color: #5DADEC;
+}
+
+.li_header_bottom {
+  float: right;
+}
+
+.li_header_bottom a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 7px 8px;
+  text-decoration: none;
+  font-size: 0.8em;
+}
+
+.li_header_bottom a:hover {
+  background-color: #5DADEC;
+}
+
+.active {
+  background-color: #EB6A3C;
+}
+
+#archie_boy_img {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  width: 25%;
+
+}
+
+.Pooplord_container {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: white;
+  background-color: #4A3D53;
+  overflow: hidden;
+}
+
+.Pooplord_container_text {
+  font-size: 1.3em; 
+  color: #D6C5B2;
+}
+
+.Scott-Cornman_container {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: white; 
+  background-color: #223320; 
+  overflow: hidden;
+}
+
+.Scott-Cornman_container_text {
+  font-size: 1.3em;
+  color: #D8CE5E; 
+}
+  
+.Rupus_container {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: white;
+  background-color: #3F3A2B;
+  overflow: hidden;
+}   
+
+.Rupus_container_text {
+  font-size: 1.3em; 
+  color: #D87C96;  
+}
+
+.Flarglin_container {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: white;
+  background-color: #A4543A; 
+  overflow: hidden;
+}   
+
+.Flarglin_container_text {
+  font-size: 1.3em;
+  color: #FFE300;   
+}
+
+.Pete_container {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: white;
+  background-color: #10183D;
+  overflow: hidden;
+}
+
+.Pete_container_text {
+  font-size: 1.3em;
+  color: #CCD9F2; 
+}
+
+.Archie_container {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: white;
+  background-color: #401A1A; 
+  overflow: hidden;
+}
+
+.Archie_container_text {
+  font-size: 1.3em;
+  color: #FFAA7F; 
+}
+  
+.Rob_container {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: white;
+  background-color: #34005F;  
+  overflow: hidden;
+}   
+
+.Rob_container_text {
+  font-size: 1.3em;
+  color: #FFB4FC;   
+}
+
+.Richie_container {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: white;
+  background-color: #1A1F40;
+  overflow: hidden;
+}   
+
+.Richie_container_text {
+  font-size: 1.3em;
+  color: #FFDC95;   
+}
+
+.Tom_container {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: white;
+  background-color: #2B1A05;   
+  overflow: hidden;
+}   
+
+.Tom_container_text {
+  font-size: 1.3em;
+  color: #FFD658;   
+}
+</style>
+
 <body>
+
+<div class="universal-popcorns-top-title"><a href="../../index.html">Universal Popcorns</a></div> 
+
+<div class="back-arrow">
+ <a href="../index.html">
+  <img src="../../icons/google/arrow-back.svg" alt="Back arrow.">
+ </a> 
+</div>
+
+<div class="wrapper-max-width">
 
 <h1 id="tms_title">&#9836; TOM'S MUSIC SCHOOL &#9836;</h1>
 
@@ -109,10 +345,6 @@
   <li class="li_header_bottom"><a href="ask-tom.html">Ask Tom</a></li>
 </ul>
 
-<div class="footer">
-  <p>&copy; 2022 S.C.A.R.R. Productions.</p>
-</div>
-
 
 
 
@@ -125,6 +357,12 @@ document.getElementById("tms_title").addEventListener("click", function(){
 });
   </script>
  
+
+
+
+</div>
+ 
 </body>
+
 </html>
 

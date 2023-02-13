@@ -5,7 +5,11 @@
   <meta name="description" content="Ask Tom your questions and he will reply from his skyscraper!">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="main.css">
+
+  <link rel="stylesheet" href="../../main.css">
+
+  <link rel="stylesheet" type="text/css" href="../../fonts/fonts.css">
+
   <link rel="shortcut icon" type="image/x-icon" href="../favicons/favicon.ico">
   <link rel="apple-touch-icon" sizes="180x180" href="../favicons/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="../favicons/favicon-32x32.png">
@@ -13,7 +17,139 @@
   <link rel="manifest" href="../favicons/site.webmanifest">
 </head>
 
+<style>
+
+body {
+  font-family: Arial, Tahoma, sans-serif;
+  color: #EB6A3C;
+  overflow-wrap: anywhere;
+}
+
+h1 {
+  font-family: Arial, Tahoma, sans-serif;
+  font-size: 1.5em;
+  color: #EB6A3C;
+}
+
+h2 {
+  font-size: 1.5em;
+  text-align: center;
+  color: #5DADEC; 
+}
+
+li {
+  margin-top: 1.3em;
+}
+
+.ul_header {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.li_header {
+  float: left;
+}
+
+.li_header a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 7px 8px;
+  text-decoration: none;
+  font-size: 0.8em;
+}
+
+.li_header a:hover {
+  background-color: #5DADEC;
+}
+
+.li_header_bottom {
+  float: right;
+}
+
+.li_header_bottom a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 7px 8px;
+  text-decoration: none;
+  font-size: 0.8em;
+}
+
+.li_header_bottom a:hover {
+  background-color: #5DADEC;
+}
+
+.active {
+  background-color: #EB6A3C;
+}
+
+.question_section {
+margin-bottom: 20px;
+}	
+
+.question_username {
+  display: inline-block;
+  margin-right: 10px;
+  color: red;
+}
+
+.question_date {
+  display: inline-block;
+  color: white;
+}
+
+.question_asked {
+  margin-top: 10px;
+  color: #FFDC95; 
+}
+
+.question_answer {
+  margin-top: 10px;
+  text-indent: 25px;
+  color: #5DADEC; 
+}
+
+.real_question {
+  margin-left: 10px;
+  font-weight: bold;
+  color: #FFDC95;
+  background-color: red;  
+}
+
+fieldset {
+  border: 0;
+}
+
+.ask_tom_contact_form {
+  margin-bottom: 50px;
+  overflow: hidden;
+}
+
+.blog_table {
+  border-collapse: separate;
+  border-spacing: 20px 0;
+}
+
+.blog_table td {
+  padding: 10px 0;
+  vertical-align: baseline;
+}	
+</style>
+
 <body>
+
+<div class="universal-popcorns-top-title"><a href="../../index.html">Universal Popcorns</a></div>  	
+
+<div class="back-arrow">
+	<a href="../index.html">
+	 <img src="../../icons/google/arrow-back.svg" alt="Back arrow.">
+	</a> 
+   </div>
+
+<div class="wrapper-max-width">
 
 <h1 id="tms_title">&#9836; TOM'S MUSIC SCHOOL &#9836;</h1>
 
@@ -829,7 +965,7 @@ Wait I mean I didn't do it</div>
 <div class="question_asked">How many notes do you use in an octave regularly?
 </div>
 <br>
-<div class="question_answer">Oh, I have a very big <a class="bt"><span>note number</span></a> mr. Ferguson, ifyaknowwhatimean.</div>
+<div class="question_answer">Oh, I have a very big note number mr. Ferguson, ifyaknowwhatimean.</div>
 <br>
 </div>
 
@@ -1183,10 +1319,6 @@ Wait I mean I didn't do it</div>
   <li class="li_header_bottom"><a href="ask-tom.html" class="active">Ask Tom</a></li>
 </ul>
 
-<div class="footer">
-  <p>&copy; 2022 S.C.A.R.R. Productions.</p>
-</div>
-
 
 
 
@@ -1211,5 +1343,12 @@ $(document).ready(function(){
 });
 </script>
 
+
+
+
+
+</div>
+
 </body>
+
 </html>
