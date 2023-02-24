@@ -1,0 +1,8 @@
+RewriteEngine On
+RewriteCond %{HTTP:Accept-Encoding} br
+RewriteRule ^(.*\.(js|wasm|html|data))$ $1.br [L,QSA,E=MYENC:br,T=application/javascript]
+
+<FilesMatch ".*\.(js|wasm|html|data)">
+    Header set Content-Encoding br env=MYENC
+    Header set Vary Accept-Encoding
+</FilesMatch>
