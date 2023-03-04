@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<title>Random Band Generator</title>  
+
+<meta name="description" content="Generate a random band name, style and instrumentation.">
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" type="text/css" href="../../../main.css">
+
+<link rel="stylesheet" type="text/css" href="../../../fonts/fonts.css">
+
+<link rel="shortcut icon" type="image/x-icon" href="../../favicons/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="../../favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../favicons/favicon-16x16.png">
+<link rel="manifest" href="../../favicons/site.webmanifest">
+
+<style>
+.random-band-container {
+  font-size: 2rem;
+  border-style: dashed;
+  border-width: 5px;
+  padding: 10px;
+}
+
+.random-band-container div {
+  margin-top: 10px;
+}
+
+#display-name {
+  color: orange;
+}
+
+#display-style {
+  color: lightcoral;
+}
+
+#display-instruments {
+  color: darkcyan;
+}
+
+#display-ratings {
+  color: sandybrown;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="universal-popcorns-top-title"><a href="../../../index.html">Universal Popcorns</a>
+</div>  
+
+<div class="back-arrow">
+ <a href="../index.html">
+  <img src="../../../icons/google/arrow-back.svg" alt="Back arrow.">
+ </a> 
+</div>
+
+<div class="wrapper-max-width">
+
+<h1>Random Band Generator</h1>    
+
+<div class="random-band-container">
+  
+  <div id="display-name"></div>
+	<div id="display-style"></div>
+	<div id="display-instruments"></div>
+  <div id="display-ratings"></div>
+
+<script>
+		// Random band names [adjectives]
+		var bandNames = [
+      "Afraid ",
+			"Several ",
+			"Cool ",
+			"Lively ",
+			"Suspicious ",
+			"Filthy ",
+      "Fluffy ",
+      "Terrific ",
+      "Dangerous ",
+      "Pleasant ",
+      "Scared ",
+      "Thoughtful ",
+      "Generous ",
+      "Kind-hearted ",
+      "Rich ",
+      "Beautiful ",
+      "Powerful ",
+      "Shiny ",
+      "Underground ",
+      "Severe ",
+      "Abundant ",
+      "Reasonable ",
+      "Jolly ",
+      "Charming ",
+      "Fearless ",
+      "Clean ",
+      "Outlandish ",
+      "Hospitable ",
+      "Useful ",
+      "Famous ",
+      "Educated ",
+      "Classy ",
+      "Risky ",
+      "Great ",
+      "Devilish ",
+      "Inspired ",
+      "Ethereal ",
+      "Scandalous ",
+      "Cooperative ",
+      "Fortunate ",
+      "Friendly ",
+      "Comedic ",
+      "Obnoxious ",
+      "Offensive ",
+      "Positive ",
+      "Negative ",
+      "Angry ",
+      "Calm", 
+      "Happy ",
+      "Sad ",
+      "Healthy ",
+      "Outgoing ",
+      "Talkative",
+      "Boring",
+      "Funky ",
+      "Orchestral ",
+      "Outrageous",
+      "Clunky ",
+      "Controversial ",
+      "Ridiculous ",
+      "Moderate ",
+      "Normal ",
+      "Everyday ",
+      "Casual ",
+      "Rare ", 
+      "Extraordinary ",
+      "Athletic ",
+      "Picturesque ",
+      "Melodic "
+    ];
+
+		var bandName = bandNames[Math.floor(Math.random() * bandNames.length)];
+
+    // Random band names [nouns]
+		var bandNames2 = [
+        "Cats",
+        "Clowns",
+        "Computers",
+        "Machines",
+        "Pirates",
+        "Plants",
+        "Scientists",
+        "Painters",
+        "Opinions",
+        "Soup",
+        "Meat",
+        "Pie",
+        "Garbage",
+        "Pillow",
+        "Plumbers",
+        "Magicians",
+        "Musicians",
+        "Composers",
+        "Potatoes",
+        "Bankers",
+        "Fishing",
+        "Cooks",
+        "Orchestrators",
+        "Robots",
+        "Charlatans",
+        "Singers",
+        "Avocados",
+        "Octopuses",
+        "Farmers",
+        "Person",
+        "Mood",
+        "University",
+        "Bedsheets",
+        "Roads",
+        "Bricks",
+        "Journey",
+        "Weddings",
+        "Actors",
+        "Virus",
+        "Town",
+        "City",
+        "Hotel",
+        "Cactus",
+        "Cowboys",
+        "Homework",
+        "Credit Cards",
+        "Trees",
+        "Pickles",
+        "Legs",
+        "Toilet",
+        "Banana",
+        "Bookworkms",
+        "Games",
+        "Keyboardists",
+        "Guitarists",
+        "Orchestra",
+        "Pair of Water Goggles",
+        "Squirrels",
+        "Cows",
+        "Acrobats"
+    ];
+
+		var bandName2 = bandNames2[Math.floor(Math.random() * bandNames2.length)];
+
+		// Display random band name [adjective] + band name [noun]    
+    document.getElementById("display-name").innerHTML = "<strong>Band name:</strong> " + bandName + " " + bandName2;
+
+
+		// Random musical styles
+		var musicalStyles = [
+      "French Tech House",
+      "Serbian Metal",
+      "Bulgarian Electronic",
+      "Bubble Trance",
+      "Liquid Funk",
+      "Deep Happy Hardcore",
+      "Lithuanian EDM",
+      "Deep Filthstep",
+      "Swedish Tropical House",
+      "Classic Romanian Pop",
+      "K-pop Reality Show",
+      "Polish Synthpop",
+      "Symphonic Deathcore",
+      "Deep Melodic Metalcore",
+      "Nintendo DS",
+      "Punk Rock Italiano",
+      "Greek Clarinet",
+      "Viking Black Metal",
+      "Christian Hardcore",
+      "Smooth Jazz",
+      "Technical Grindcore",
+      "Math Rock",
+      "Neo-Trad Doom Metal",
+      "Instrumental Stoner Rock",
+      "Louisiana Metal",
+      "Broadway Musical",
+      "Opera",
+      "Classical",
+      "Elevator Music",
+      "British Orchestra",
+      "Avant-Garde",
+      "Show Tunes",
+      "Belgian Singer-Songwriter",
+      "Albanian Folk",
+      "Experimental Psych",
+      "Nordic Soundtrack",
+      "Ambient Post-Rock",
+      "Glitch Pop",
+      "Epic Doom",
+      "Sci-Fi Metal",
+      "Wisconsin Indie",
+      "Scottish New Wave",
+      "Nerdcore",
+      "Clowncore",
+      "Atmospheric Sludge",
+      "African Gospel",
+      "Tavern",
+      "Barbershop Quartet"
+    ];
+    
+		var musicalStyle = musicalStyles[Math.floor(Math.random() * musicalStyles.length)];
+		document.getElementById("display-style").innerHTML = "<strong>Style:</strong> " + musicalStyle;
+
+		// Random instruments
+		var instruments = [
+    "Accordion",
+      "Air Guitar",
+      "Alto",
+      "Bagpipes",
+      "Banjo",
+      "Bassoon",
+      "Bongos",
+      "Bouzouki",
+      "Bugle",
+      "Car Horn",
+      "Castanets",
+      "Celesta",
+      "Cello",
+      "Chimes",
+      "Clarinet",
+      "Clavichord",
+      "Contrabass Flute",
+      "Cornet",
+      "Cymbals",
+      "Double Bass",
+      "Drum Kit",
+      "Euphonium",
+      "Female Choir",
+      "Finger Snap",
+      "Flamenco Guitar",
+      "Flugelhorn",
+      "French Horn",
+      "Glockenspiel",
+      "Gong",
+      "Hand Bells",
+      "Harmonica",
+      "Harp",
+      "Kazoo",
+      "Lyre",
+      "Male Choir",
+      "Mandolin",
+      "Marimba",
+      "Melodica",
+      "Music Box",
+      "Oboe",
+      "Ocarina",
+      "Organ",
+      "Otamatone",
+      "Pennywhistle",
+      "Piccolo",
+      "Player Piano",
+      "Saxophone",
+      "Sitar",
+      "Slide Whistle",
+      "Soprano",
+      "Sousaphone",
+      "Tambourine",
+      "Tambura",
+      "Timpani",
+      "Triangle",
+      "Trombone",
+      "Trumpet",
+      "Tuba",
+      "Ukulele",
+      "Vibraphone",
+      "Viola",
+      "Violin",
+      "Wood Blocks",
+      "Xylophone",
+      "Zither"
+    ];
+
+		var randomInstruments = [];
+    var numInstruments = Math.floor(Math.random() * 9) + 2; // display a random number of instruments (2 minimum, 10 maximum)
+    for (var i = 0; i < numInstruments; i++) {
+       var instrument = instruments[Math.floor(Math.random() * instruments.length)];
+        if (randomInstruments.indexOf(instrument) === -1) {
+        randomInstruments.push(instrument);
+    }
+}
+		document.getElementById("display-instruments").innerHTML = "<strong>Instruments:</strong> " + randomInstruments.join(", ");
+
+		// Random ratings
+		var randomNumber = Math.round(Math.random() * 100) / 10;
+    document.getElementById("display-ratings").innerHTML = "<strong>Rating:</strong> " + randomNumber + "/10";
+
+</script>
+
+
+
+<button onclick="refreshPage()">Generate New Band</button>
+
+<script>
+function refreshPage() {
+    location.reload();
+}
+</script>
+
+
+
+</div>
+</div>
+
+</body>
+
+</html>
