@@ -182,24 +182,6 @@ function onPlayerError(event) {
 
 
 
-// Generate list items
-function createListItems() {
-  var listItems = '';
-  for (var i = 0; i < videoUrls.length; i++) {
-    listItems += '<li>' + videoUrls[i].title + '</li>';
-  }
-  return listItems;
-}
-
-// Add list items to the HTML
-var videoList = document.getElementById('videoList');
-videoList.innerHTML = createListItems();
-
-
-
-
-
-
 
 
 
