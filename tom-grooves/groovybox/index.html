@@ -42,48 +42,69 @@
 
 <div id="player"></div>
 
-<script>
-  function onYouTubeIframeAPIReady() {
-    var player;
-    var videoIds = [
-      "SAa4teWb0rU",
-      "EahKmJ4-tjY",
-      "r1C69fzfGBM"
-    ];
-    var currentIndex = Math.floor(Math.random() * videoIds.length);
+	<script src="https://www.youtube.com/player_api"></script>
+	<script>
+		// array of video IDs
+		var videoIds = ["SAa4teWb0rU", "EahKmJ4-tjY", "r1C69fzfGBM"];
 
-    function onPlayerReady(event) {
-      event.target.playVideo();
-    }
+		// shuffle the video IDs
+		shuffleArray(videoIds);
 
+		// create a new YouTube player
+		var player;
+		function onYouTubePlayerAPIReady() {
+			player = new YT.Player('player', {
+				height: '360',
+				width: '640',
+				videoId: videoIds[0],
+				events: {
+					'onStateChange': onPlayerStateChange
+				}
+			});
+		}
+
+		// function to shuffle an array
+		function shuffleArray(array) {
+			for (var i = array.length - 1; i > 0; i--) {
+				var j = Math.floor(Math.random() * (i + 1));
+				var temp = array[i];
+				array[i] = array[j];
+				array[j] = temp;
+			}
+			return array;
+		}
+
+		// function to load and play the next video
+		function loadNextVideo() {
+			// remove the current video from the array
+			videoIds.splice(0, 1);
+
+			// if there are no more videos, reshuffle the array
+			if (videoIds.length === 0) {
+				shuffleArray(videoIds);
+			}
+
+			// load and play the next video
+			player.loadVideoById(videoIds[0]);
+		}
+
+		// function to handle the player state change event
     function onPlayerStateChange(event) {
-      if (event.data === YT.PlayerState.ENDED) {
-        playNextVideo();
-      }
-      else if (event.data === YT.PlayerState.ERROR) {
-        console.log("Error playing video");
-        playNextVideo();
-      }
-    }
-
-    function playNextVideo() {
-      currentIndex = (currentIndex + 1) % videoIds.length;
-      player.loadVideoByUrl(videoIds[currentIndex]);
-    }
-
-    player = new YT.Player('player', {
-      height: '360',
-      width: '640',
-      videoId: videoIds[currentIndex],
-      events: {
-        'onReady': onPlayerReady,
-        'onStateChange': onPlayerStateChange
-      }
+  if (event.data == YT.PlayerState.ENDED) {
+    // The current video has ended, play the next video
+    player.loadPlaylist({
+      playlist: videoIds,
+      index: (currentIndex + 1) % videoIds.length
+    });
+  } else if (event.data == YT.PlayerState.ERROR) {
+    // An error occurred while playing the video, play the next video
+    player.loadPlaylist({
+      playlist: videoIds,
+      index: (currentIndex + 1) % videoIds.length
     });
   }
-</script>
-<script src="https://www.youtube.com/iframe_api"></script>
-
+}
+	</script>
 
 
 
