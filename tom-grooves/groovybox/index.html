@@ -40,26 +40,49 @@
    
 <h1>Groovybox</h1>
 
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Random YouTube Video Player</title>
-  </head>
-  <body>
-    <iframe id="ytplayer" width="640" height="360" src="" frameborder="0"></iframe>
-    <script>
-      // An array of YouTube video IDs
-      var videoIDs = ["SAa4teWb0rU", "EahKmJ4-tjY", "r1C69fzfGBM"];
+<div id="player"></div>
 
-      // Pick a random video ID from the array
-      var randomVideoID = videoIDs[Math.floor(Math.random() * videoIDs.length)];
+<script>
+  function onYouTubeIframeAPIReady() {
+    var player;
+    var videoIds = [
+      "SAa4teWb0rU",
+      "EahKmJ4-tjY",
+      "r1C69fzfGBM"
+    ];
+    var currentIndex = Math.floor(Math.random() * videoIds.length);
 
-      // Set the source of the YouTube player to the selected video ID
-      document.getElementById("ytplayer").src = "https://www.youtube.com/embed/" + randomVideoID;
-    </script>
-  </body>
-</html>
+    function onPlayerReady(event) {
+      event.target.playVideo();
+    }
+
+    function onPlayerStateChange(event) {
+      if (event.data === YT.PlayerState.ENDED) {
+        playNextVideo();
+      }
+      else if (event.data === YT.PlayerState.ERROR) {
+        console.log("Error playing video");
+        playNextVideo();
+      }
+    }
+
+    function playNextVideo() {
+      currentIndex = (currentIndex + 1) % videoIds.length;
+      player.loadVideoByUrl(videoIds[currentIndex]);
+    }
+
+    player = new YT.Player('player', {
+      height: '360',
+      width: '640',
+      videoId: videoIds[currentIndex],
+      events: {
+        'onReady': onPlayerReady,
+        'onStateChange': onPlayerStateChange
+      }
+    });
+  }
+</script>
+<script src="https://www.youtube.com/iframe_api"></script>
 
 
 
