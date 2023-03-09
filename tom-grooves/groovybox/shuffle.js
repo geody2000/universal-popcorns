@@ -1,5 +1,9 @@
 var videoUrls = [
   {
+    url: 'youtube.com/watch?v=xvdQNuIojeI',
+    title: 'Billy Joel - For The Longest Time'
+  },
+  {
     url: 'https://www.youtube.com/watch?v=Rc7_lCfbQP0',
     title: 'Bobby Darin - Beyond The Sea'
   },
