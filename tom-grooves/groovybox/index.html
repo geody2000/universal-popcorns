@@ -24,6 +24,17 @@
 <link rel="icon" type="image/png" sizes="16x16" href="../favicons/favicon-16x16.png">
 <link rel="manifest" href="../favicons/site.webmanifest">
 
+<script src="https://www.youtube.com/player_api"></script>
+<script src="player.js"></script>
+<script src="shuffle.js"></script>
+
+<style>
+  #player {
+    display: block;
+    margin-bottom: 20px;
+  }
+</style>
+
 </head>
 
 <body>
@@ -41,74 +52,7 @@
 <h1>Groovybox</h1>
 
 <div id="player"></div>
-
-	<script src="https://www.youtube.com/player_api"></script>
-	<script>
-		// array of video IDs
-		var videoIds = ["SAa4teWb0rU", "EahKmJ4-tjY", "r1C69fzfGBM"];
-
-		// shuffle the video IDs
-		shuffleArray(videoIds);
-
-		// create a new YouTube player
-		var player;
-		function onYouTubePlayerAPIReady() {
-			player = new YT.Player('player', {
-				height: '360',
-				width: '640',
-				videoId: videoIds[0],
-				events: {
-					'onStateChange': onPlayerStateChange
-				}
-			});
-		}
-
-		// function to shuffle an array
-		function shuffleArray(array) {
-			for (var i = array.length - 1; i > 0; i--) {
-				var j = Math.floor(Math.random() * (i + 1));
-				var temp = array[i];
-				array[i] = array[j];
-				array[j] = temp;
-			}
-			return array;
-		}
-
-		// function to load and play the next video
-		function loadNextVideo() {
-			// remove the current video from the array
-			videoIds.splice(0, 1);
-
-			// if there are no more videos, reshuffle the array
-			if (videoIds.length === 0) {
-				shuffleArray(videoIds);
-			}
-
-			// load and play the next video
-			player.loadVideoById(videoIds[0]);
-		}
-
-		// function to handle the player state change event
-    function onPlayerStateChange(event) {
-  if (event.data == YT.PlayerState.ENDED) {
-    // The current video has ended, play the next video
-    player.loadPlaylist({
-      playlist: videoIds,
-      index: (currentIndex + 1) % videoIds.length
-    });
-  } else if (event.data == YT.PlayerState.ERROR) {
-    // An error occurred while playing the video, play the next video
-    player.loadPlaylist({
-      playlist: videoIds,
-      index: (currentIndex + 1) % videoIds.length
-    });
-  }
-}
-	</script>
-
-
-
-
+	<button id="btn">Play Another Video</button>
 
 
 
