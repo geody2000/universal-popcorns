@@ -14,6 +14,5 @@ function changeVideo() {
 document.addEventListener("DOMContentLoaded", () => {
   var videoPlayer = document.getElementById("video-player");
   changeVideo();
-  videoPlayer.addEventListener('ended', changeVideo);
   document.getElementById("change-video").addEventListener("click", changeVideo);
 });

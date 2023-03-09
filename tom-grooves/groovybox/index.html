@@ -6,7 +6,7 @@
 
 <title>Groovybox</title>
 
-<meta name="description" content="Tom's impeccable grooves.">
+<meta name="description" content="Tom's impeccable music picks.">
 
 <meta charset="UTF-8">
 
@@ -22,6 +22,49 @@
 <link rel="icon" type="image/png" sizes="16x16" href="../favicons/favicon-16x16.png">
 <link rel="manifest" href="../favicons/site.webmanifest">
 
+<style>
+    .top-bar-container {
+     display: flex;
+     align-items: center;
+     justify-content: space-around;
+     font-size: 20px;
+    }
+
+    .coin-container {
+        display: flex;
+        align-items: center;
+        font-size: inherit;
+    }
+
+    #change-video {
+        font-size: inherit;
+        background-color: transparent;
+        border-style: none;
+        color: white;
+    }
+
+    #change-video:hover {
+        cursor: pointer;
+        color: orange;
+    }
+
+    #coin-button {
+        font-size: inherit;
+        background-color: transparent;
+        border-style: none;
+    }
+
+    #video-player {
+        display: block;
+        border-style: dotted;
+        border-width: 5px;
+        border-color: orange;
+        max-width: 100%;
+        margin: auto;
+    }
+
+</style>
+
 </head>
 
 <body>
@@ -33,21 +76,37 @@
      <img src="../../icons/google/arrow-back.svg" alt="Back arrow.">
     </a> 
    </div>
-
-<div class="wrapper-max-width">
    
+<div class="wrapper-max-width">
+
 <h1>Groovybox</h1>
+
+<div class="Tom_container">  
+    <img src="../../images/SCARR_Tom_Grooves_Transparent.png" alt="[TOM]" width="100" height="100">
+    <p class="Tom_container_text" id="tom-random-phrase"></p>
+  </div>
+  
+<script src="tom-phrases.js"></script>  
+
+<div class="top-bar-container">
+
+<div class="coin-container">
+<script src="coin-count.js"></script>
+<button id="coin-button" onclick="incrementValue()">
+    <img src="dollar-coin-2139.svg" width="25" height="25" alt="Coin icon by Iconpacks.net" id="coin-image">
+  </button>
+  <p id="value">$0</p>
+</div>
+
+<button id="change-video">Go to another tune</button>
+
+</div>
 
 <iframe id="video-player" width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     <br>
 
-<button id="change-video">Go to another tune</button>
-
-
 <script src="shuffle.js"></script>
-<script src="random-video-loader.js"></script>        
-
-
+<script src="random-video-loader.js"></script> 
 
 </div>
 </body>
