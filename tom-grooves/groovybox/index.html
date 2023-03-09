@@ -6,8 +6,6 @@
 
 <title>Groovybox</title>
 
-<script src="https://www.youtube.com/iframe_api"></script> 
-
 <meta name="description" content="Tom's impeccable grooves.">
 
 <meta charset="UTF-8">
@@ -23,12 +21,6 @@
 <link rel="icon" type="image/png" sizes="32x32" href="../favicons/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="../favicons/favicon-16x16.png">
 <link rel="manifest" href="../favicons/site.webmanifest">
-
-<style>
- #change-video {
-    margin-top: 20px;
-  }
-</style>
 
 </head>
 
@@ -46,37 +38,15 @@
    
 <h1>Groovybox</h1>
 
-<div id="video-container">
+<iframe id="video-player" width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <br>
+    <button onclick="changeVideo()">Random Tune</button>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/SAa4teWb0rU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen autoplay></iframe>
+<script src="shuffle.js"></script>
+<script src="random-video-loader.js"></script>        
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/EahKmJ4-tjY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen autoplay></iframe>
+
 
 </div>
-
-<button id="change-video">Change Video</button>
-
-</div>
-
-<script>
-const videoContainer = document.getElementById('video-container');
-const iframes = videoContainer.getElementsByTagName('iframe');
-const button = document.getElementById('change-video');
-
-function showRandomIframe() {
-  const randomIndex = Math.floor(Math.random() * iframes.length);
-  for (let i = 0; i < iframes.length; i++) {
-    if (i === randomIndex) {
-      iframes[i].style.display = 'block';
-    } else {
-      iframes[i].style.display = 'none';
-    }
-  }
-}
-
-button.addEventListener('click', showRandomIframe);
-showRandomIframe();
-</script>
-
 </body>
 </html>
