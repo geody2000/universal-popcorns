@@ -9,6 +9,7 @@ for (var i = 0; i < videoUrls.length; i++) {
     var randomUrl = videoUrls[randomIndex].url;
     var videoPlayer = document.getElementById("video-player");
     videoPlayer.src = randomUrl;
+    videoPlayer.addEventListener('ended', changeVideo);
   }
   
   document.addEventListener("DOMContentLoaded", () => {
