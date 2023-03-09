@@ -1,6 +1,6 @@
 var videoUrls = [
   {
-    url: 'youtube.com/watch?v=xvdQNuIojeI',
+    url: 'https://www.youtube.com/watch?v=xvdQNuIojeI',
     title: 'Billy Joel - For The Longest Time'
   },
   {
