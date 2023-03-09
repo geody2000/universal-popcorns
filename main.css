@@ -321,7 +321,18 @@ font-size: 3rem;
   color: #FFD658;   
 }
 
-.Tom_container .ReRegrooved img {
+.Tom_container_ReRegrooved {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: white;
+  background-color: #2B1A05;   
+  overflow: auto;
+}
+
+.Tom_container_ReRegrooved img {
   padding: 10px;
 }
 /* Character flexboxes end */
