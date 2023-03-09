@@ -1,5 +1,9 @@
 var videoUrls = [
   {
+    url: 'https://www.youtube.com/watch?v=Rc7_lCfbQP0',
+    title: 'Bobby Darin - Beyond The Sea'
+  },
+  {
     url: 'https://www.youtube.com/watch?v=SAa4teWb0rU',
     title: 'Ella Fitzgerald - Blue Skies'
   },
