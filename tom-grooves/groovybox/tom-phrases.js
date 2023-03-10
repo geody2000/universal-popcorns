@@ -20,7 +20,16 @@ var tomPhrases = [
     "I may be running out of music. Peeete! Load more music! (This guy.)",
     "This is a curated playlist by yours truly.",
     "I actually wrote the first song that shows up. I was a ghostwriter.",
-    "I hope ye dropped a coin in the jukebox. Ye're not a pirate, are ye?"
+    "I hope ye dropped a coin in the jukebox. Ye're not a pirate, are ye?",
+    "I would vibe with you but I need to conduct my philharmonic orchestra.",
+    "When is one of MY songs coming up?",
+    "Did you know the average Tom Grooves record makes you 1% smarter?",
+    "Legend has it if you throw too many coins in the jukebox it will eat you.",
+    "The following track was approved by the Groovy Headquarters of Incredible Jams.",
+    "I think Pete put some songs here without my permission.",
+    "Greetings, stranger. Grab a seat and some headphones.",
+    "Timmy the Frog must have added some good ol' goodies.",
+    "Do you think Rupus dipped his French toes (or French toast) in this playlist?"
 ]
 
 
