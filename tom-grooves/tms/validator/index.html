@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>TMS Validator</title>
+  <meta name="description" content="Tom's Music School is the number one choice of the fonky moosician.">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+  <link rel="stylesheet" href="../../../main.css">
+  <link rel="stylesheet" href="../tms.css">
+
+  <link rel="stylesheet" type="text/css" href="../../../fonts/fonts.css">
+  
+  <link rel="shortcut icon" type="image/x-icon" href="../../favicons/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../favicons/favicon-16x16.png">
+  <link rel="manifest" href="../../favicons/site.webmanifest">
+
+
+  <style>
+    .validator-container {
+      text-align: center;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+    .validator-question {
+      font-size: 1.2rem;
+      color: yellow;
+      margin-bottom: 20px;
+    }
+    .validator-answer {
+      font-size: 1.1rem;
+      color: orange;
+    }
+    .validator-answer label {
+      display: block;
+      margin-bottom: 10px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+<div class="universal-popcorns-top-title"><a href="../../../index.html">Universal Popcorns</a></div> 
+
+<div class="back-arrow">
+ <a href="../more.html#tms-validator">
+  <img src="../../../icons/google/arrow-back.svg" alt="Back arrow.">
+ </a> 
+</div>
+
+<div class="wrapper-max-width">
+
+<h1 id="tms_title">&#9836; TOM'S MUSIC SCHOOL &#9836;</h1>
+
+<ul class="ul_header">
+  <li class="li_header"><a href="../index.html">Home</a></li>
+  <li class="li_header"><a href="../ask-tom.html">Ask Tom</a></li>
+  <li class="li_header"><a href="../more.html" class="active">More</a></li>
+</ul>
+
+
+<h2>&#9836; TMS Validator &#9836;</h2>
+
+<script>
+  function showQuestionDoYouHaveAdvancedSkills() {
+    document.getElementById("QuestionYouNeedToPlayInstrument").style.display = "none";
+    document.getElementById("QuestionDoYouHaveAdvancedSkills").style.display = "block";
+  }
+
+  function showQuestionYouNeedToPlayInstrument() {
+    document.getElementById("VisibleParagraphs").style.display = "none";
+    document.getElementById("QuestionYouNeedToPlayInstrument").style.display = "block";
+  }
+
+  function showQuestionCanYouPlaySomethingMoreComplex() {
+    document.getElementById("QuestionCanYouPlayTheArchieTheme").style.display = "none";
+    document.getElementById("QuestionCanYouPlaySomethingMoreComplex").style.display = "block";
+  }
+
+  function showQuestionCanYouPlayTheArchieTheme() {
+    document.getElementById("QuestionCanYouPlaySomethingMoreComplex").style.display = "none";
+    document.getElementById("QuestionCanYouPlayTheArchieTheme").style.display = "block";
+  }
+
+  function showQuestionYouNeedMoreRepertoire() {
+    document.getElementById("VisibleParagraphs").style.display = "none";
+    document.getElementById("QuestionYouNeedMoreRepertoire").style.display = "block";
+  }
+
+  function showQuestionSloppyPlaying() {
+    document.getElementById("VisibleParagraphs").style.display = "none";
+    document.getElementById("QuestionSloppyPlaying").style.display = "block";
+  }
+
+  function showNeverHeardOfArchieTheme() {
+    document.getElementById("VisibleParagraphs").style.display = "none";
+    document.getElementById("NeverHeardOfArchieTheme").style.display = "block";
+  }
+
+    function showQuestionCanYouPlayTheFullVersionOfArchieTheme() {
+      document.getElementById("NeverHeardOfArchieTheme").style.display = "none";
+    document.getElementById("QuestionCanYouPlayTheFullVersionOfArchieTheme").style.display = "block";
+  }
+
+  function showOnlyKnowsTheShortVersionOfArchieTheme() {
+    document.getElementById("VisibleParagraphs").style.display = "none";
+    document.getElementById("OnlyKnowsTheShortVersionOfArchieTheme").style.display = "block";
+  }
+
+  function showHighChancesOfAdmission() {
+    document.getElementById("VisibleParagraphs").style.display = "none";
+    document.getElementById("HighChancesOfAdmission").style.display = "block";
+  }
+</script>
+
+
+
+<div id="VisibleParagraphs">
+
+<div class="validator-container" id="QuestionDoYouPlayMusicalInstrument">
+  <div class="validator-question">Do you play a musical instrument?</div>
+  <div class="validator-answer">
+    <label>
+      <input type="radio" name="RadioDoYouPlayMusicalInstrument" onclick="showQuestionDoYouHaveAdvancedSkills()">
+      Sure I do.
+    </label>
+    <label>
+      <input type="radio" name="RadioDoYouPlayMusicalInstrument" onclick="showQuestionYouNeedToPlayInstrument()">
+      I'm afraid not.
+    </label> 
+  </div>
+</div>
+
+<div class="validator-container" id="QuestionDoYouHaveAdvancedSkills" style="display: none;">
+  <div class="validator-question">Do you have advanced technical skills?</div>
+  <div class="validator-answer">
+    <label>
+      <input type="radio" name="RadioDoYouPlayInstrument" onclick="showQuestionCanYouPlaySomethingMoreComplex()">
+      I can bust out "Mary Had A Little Lamb" on a good day.
+    </label>
+    <label>
+      <input type="radio" name="RadioDoYouPlayInstrument" onclick="showQuestionCanYouPlayTheArchieTheme()">
+      I can play "Giant Steps" with one finger.
+    </label> 
+  </div>
+</div>
+
+<div class="validator-container" id="QuestionCanYouPlaySomethingMoreComplex" style="display: none;">
+  <div class="validator-question">This is a promising start, but Tom won't be impressed that easily. Can you play something more complex than that?</div>
+  <div class="validator-answer">
+    <label>
+      <input type="radio" name="RadioCanYouPlaySomethingMoreComplex" onclick="showQuestionYouNeedMoreRepertoire()">
+      No, that was my entire repertoire.
+    </label>
+    <label>
+      <input type="radio" name="RadioCanYouPlaySomethingMoreComplex" onclick="showQuestionSloppyPlaying()">
+      Uhm... I can play the 3rd movement of the Moonlight Sonata sloppily.
+    </label> 
+  </div>
+</div>
+
+<div class="validator-container" id="QuestionCanYouPlayTheArchieTheme" style="display: none;">
+  <div class="validator-question">Ah, this is one of Tom's favorite tunes. But the real question is, can you play the Archie theme?</div>
+  <div class="validator-answer">
+    <label>
+      <input type="radio" name="RadioQuestionCanYouPlayTheArchieTheme" onclick="showNeverHeardOfArchieTheme()">
+      I've never heard of it.
+    </label>
+    <label>
+      <input type="radio" name="RadioCanYouPlayTheArchieTheme" onclick="showQuestionCanYouPlayTheFullVersionOfArchieTheme()">
+      Of course, that's one of the most epic themes of all time.
+    </label> 
+  </div>
+</div>
+
+<div class="validator-container" id="QuestionCanYouPlayTheFullVersionOfArchieTheme" style="display: none;">
+  <div class="validator-question">Absolutely. Can you play the full version of the theme on your instrument?</div>
+  <div class="validator-answer">
+    <label>
+      <input type="radio" name="RadioQuestionCanYouPlayTheArchieTheme" onclick="showOnlyKnowsTheShortVersionOfArchieTheme()">
+      Oh, no. I'm only familiar with the short version.
+    </label>
+    <label>
+      <input type="radio" name="RadioCanYouPlayTheArchieTheme" onclick="showHighChancesOfAdmission()">
+      Hell yeah, I play that version regularly, with my eyes closed.
+    </label> 
+  </div>
+</div>
+
+</div>
+
+
+
+<!-- Sorry messages. -->
+<div class="validator-container" id="QuestionYouNeedToPlayInstrument" style="display: none;">
+  <div class="validator-question">We're sorry, you need to play an instrument to enter this school.</div>
+    <a href=""><div class="generic-link-button">Retry</div></a>
+</div>
+
+<div class="validator-container" id="QuestionYouNeedMoreRepertoire" style="display: none;">
+  <div class="validator-question">While Tom greatly appreciates the classics, such as Mary Had A Little Lamb, he would not be satisfied with such narrow repertoire. You need to add more tunes to your arsenal to impress Tom.</div>
+    <a href=""><div class="generic-link-button">Retry</div></a>
+</div>
+
+<div class="validator-container" id="QuestionSloppyPlaying" style="display: none;">
+  <div class="validator-question">Tom does have a class where you learn to butcher classical music, but when it comes to auditions, he places the utmost importance on accurate musical performance, including tempo, dynamics, phrasing, articulation and so forth. Come back when you have truly mastered the 3rd movement of the Moonlight Sonata.</div>
+    <a href=""><div class="generic-link-button">Retry</div></a>
+</div>
+
+<div class="validator-container" id="NeverHeardOfArchieTheme" style="display: none;">
+  <div class="validator-question">While technical proficiency in the tune "Giant Steps" may make you a favorite in Tom's eyes, ignorance of such a classic as the "Archie theme" can only yield poor results and damage your image. It's almost as bad as not knowing Tom's "Untitled theme".</div>
+    <a href=""><div class="generic-link-button">Retry</div></a>
+</div>
+
+<div class="validator-container" id="OnlyKnowsTheShortVersionOfArchieTheme" style="display: none;">
+  <div class="validator-question">Sadly, it is not acceptable to not be familiar with the extended orchestral version of the Archie theme, scored by Tom. It would be disrespectful to the orchestrator to not know perhaps the definitive version of this theme.</div>
+    <a href=""><div class="generic-link-button">Retry</div></a>
+</div>
+
+<!-- Success. -->
+
+<div class="validator-container" id="HighChancesOfAdmission" style="display: none;">
+  <div class="validator-question">Your chances of admission to Tom's Music School seem high. Keep it up and one day you may be studying with the maestro.</div>
+    <a href=""><div class="generic-link-button">Go back to TMS Validator</div></a>
+</div>
+
+
+
+
+
+<ul class="ul_header">
+  <li class="li_header_bottom"><a href="../index.html">Home</a></li>
+  <li class="li_header_bottom"><a href="../ask-tom.html">Ask Tom</a></li>
+  <li class="li_header_bottom"><a href="../more.html" class="active">More</a></li>
+</ul>
+
+
+
+
+
+
+<audio id="tms_title_audio" src="../content/toms-music-school.mp3"></audio>
+  
+<script>
+document.getElementById("tms_title").addEventListener("click", function(){
+    document.getElementById("tms_title_audio").play();
+});
+  </script>
+ 
+
+
+
+</div>
+ 
+</body>
+
+</html>
