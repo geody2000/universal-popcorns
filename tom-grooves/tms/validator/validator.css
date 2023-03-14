@@ -1,0 +1,18 @@
+.validator-container {
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  .validator-question {
+    font-size: 1.2rem;
+    color: yellow;
+    margin-bottom: 20px;
+  }
+  .validator-answer {
+    font-size: 1.1rem;
+    color: orange;
+  }
+  .validator-answer label {
+    display: block;
+    margin-bottom: 10px;
+  }

@@ -10,6 +10,7 @@
 
   <link rel="stylesheet" href="../../../main.css">
   <link rel="stylesheet" href="../tms.css">
+  <link rel="stylesheet" href="validator.css">
 
   <link rel="stylesheet" type="text/css" href="../../../fonts/fonts.css">
   
@@ -18,28 +19,6 @@
   <link rel="icon" type="image/png" sizes="32x32" href="../../favicons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="../../favicons/favicon-16x16.png">
   <link rel="manifest" href="../../favicons/site.webmanifest">
-
-
-  <style>
-    .validator-container {
-      text-align: center;
-      padding: 10px;
-      margin-bottom: 10px;
-    }
-    .validator-question {
-      font-size: 1.2rem;
-      color: yellow;
-      margin-bottom: 20px;
-    }
-    .validator-answer {
-      font-size: 1.1rem;
-      color: orange;
-    }
-    .validator-answer label {
-      display: block;
-      margin-bottom: 10px;
-    }
-  </style>
 
 </head>
 
@@ -67,159 +46,215 @@
 <h2>&#9836; TMS Validator &#9836;</h2>
 
 <script>
-  function showQuestionDoYouHaveAdvancedSkills() {
-    document.getElementById("QuestionYouNeedToPlayInstrument").style.display = "none";
-    document.getElementById("QuestionDoYouHaveAdvancedSkills").style.display = "block";
-  }
-
-  function showQuestionYouNeedToPlayInstrument() {
-    document.getElementById("VisibleParagraphs").style.display = "none";
-    document.getElementById("QuestionYouNeedToPlayInstrument").style.display = "block";
-  }
-
-  function showQuestionCanYouPlaySomethingMoreComplex() {
-    document.getElementById("QuestionCanYouPlayTheArchieTheme").style.display = "none";
-    document.getElementById("QuestionCanYouPlaySomethingMoreComplex").style.display = "block";
-  }
-
-  function showQuestionCanYouPlayTheArchieTheme() {
-    document.getElementById("QuestionCanYouPlaySomethingMoreComplex").style.display = "none";
-    document.getElementById("QuestionCanYouPlayTheArchieTheme").style.display = "block";
-  }
-
-  function showQuestionYouNeedMoreRepertoire() {
-    document.getElementById("VisibleParagraphs").style.display = "none";
-    document.getElementById("QuestionYouNeedMoreRepertoire").style.display = "block";
-  }
-
-  function showQuestionSloppyPlaying() {
-    document.getElementById("VisibleParagraphs").style.display = "none";
-    document.getElementById("QuestionSloppyPlaying").style.display = "block";
-  }
-
-  function showNeverHeardOfArchieTheme() {
-    document.getElementById("VisibleParagraphs").style.display = "none";
-    document.getElementById("NeverHeardOfArchieTheme").style.display = "block";
-  }
-
-    function showQuestionCanYouPlayTheFullVersionOfArchieTheme() {
-      document.getElementById("NeverHeardOfArchieTheme").style.display = "none";
-    document.getElementById("QuestionCanYouPlayTheFullVersionOfArchieTheme").style.display = "block";
-  }
-
-  function showOnlyKnowsTheShortVersionOfArchieTheme() {
-    document.getElementById("VisibleParagraphs").style.display = "none";
-    document.getElementById("OnlyKnowsTheShortVersionOfArchieTheme").style.display = "block";
-  }
-
-  function showHighChancesOfAdmission() {
-    document.getElementById("VisibleParagraphs").style.display = "none";
-    document.getElementById("HighChancesOfAdmission").style.display = "block";
+  function showSentence(id) {
+    // Get all the sentence elements
+    var sentences = document.querySelectorAll('#VisibleParagraphs > div');
+    
+    // Loop through the sentences and hide them
+    for (var i = 0; i < sentences.length; i++) {
+      sentences[i].style.display = 'none';
+    }
+    
+    // Show the selected sentence
+    document.getElementById(id).style.display = 'block';
   }
 </script>
 
 
 
+
+
 <div id="VisibleParagraphs">
 
-<div class="validator-container" id="QuestionDoYouPlayMusicalInstrument">
+<div class="validator-container" id="DoYouPlayMusicalInstrument">
   <div class="validator-question">Do you play a musical instrument?</div>
   <div class="validator-answer">
     <label>
-      <input type="radio" name="RadioDoYouPlayMusicalInstrument" onclick="showQuestionDoYouHaveAdvancedSkills()">
+      <input type="radio" name="RadioDoYouPlayMusicalInstrument" onclick="showSentence('DoYouHaveAdvancedSkills')">
       Sure I do.
     </label>
     <label>
-      <input type="radio" name="RadioDoYouPlayMusicalInstrument" onclick="showQuestionYouNeedToPlayInstrument()">
+      <input type="radio" name="RadioDoYouPlayMusicalInstrument" onclick="showSentence('YouNeedToPlayInstrument')">
       I'm afraid not.
     </label> 
   </div>
 </div>
 
-<div class="validator-container" id="QuestionDoYouHaveAdvancedSkills" style="display: none;">
+<div class="validator-container" id="DoYouHaveAdvancedSkills" style="display: none;">
   <div class="validator-question">Do you have advanced technical skills?</div>
   <div class="validator-answer">
     <label>
-      <input type="radio" name="RadioDoYouPlayInstrument" onclick="showQuestionCanYouPlaySomethingMoreComplex()">
+      <input type="radio" name="RadioDoYouHaveAdvancedSkills" onclick="showSentence('CanYouPlaySomethingMoreComplex')">
       I can bust out "Mary Had A Little Lamb" on a good day.
     </label>
     <label>
-      <input type="radio" name="RadioDoYouPlayInstrument" onclick="showQuestionCanYouPlayTheArchieTheme()">
+      <input type="radio" name="RadioDoYouHaveAdvancedSkills" onclick="showSentence('CanYouPlayTheArchieTheme')">
       I can play "Giant Steps" with one finger.
     </label> 
   </div>
 </div>
 
-<div class="validator-container" id="QuestionCanYouPlaySomethingMoreComplex" style="display: none;">
+<div class="validator-container" id="CanYouPlaySomethingMoreComplex" style="display: none;">
   <div class="validator-question">This is a promising start, but Tom won't be impressed that easily. Can you play something more complex than that?</div>
   <div class="validator-answer">
     <label>
-      <input type="radio" name="RadioCanYouPlaySomethingMoreComplex" onclick="showQuestionYouNeedMoreRepertoire()">
+      <input type="radio" name="RadioCanYouPlaySomethingMoreComplex" onclick="showSentence('YouNeedMoreRepertoire')">
       No, that was my entire repertoire.
     </label>
     <label>
-      <input type="radio" name="RadioCanYouPlaySomethingMoreComplex" onclick="showQuestionSloppyPlaying()">
+      <input type="radio" name="RadioCanYouPlaySomethingMoreComplex" onclick="showSentence('SloppyPlaying')">
       Uhm... I can play the 3rd movement of the Moonlight Sonata sloppily.
     </label> 
   </div>
 </div>
 
-<div class="validator-container" id="QuestionCanYouPlayTheArchieTheme" style="display: none;">
+<div class="validator-container" id="CanYouPlayTheArchieTheme" style="display: none;">
   <div class="validator-question">Ah, this is one of Tom's favorite tunes. But the real question is, can you play the Archie theme?</div>
   <div class="validator-answer">
     <label>
-      <input type="radio" name="RadioQuestionCanYouPlayTheArchieTheme" onclick="showNeverHeardOfArchieTheme()">
+      <input type="radio" name="RadioCanYouPlayTheArchieTheme" onclick="showSentence('NeverHeardOfArchieTheme')">
       I've never heard of it.
     </label>
     <label>
-      <input type="radio" name="RadioCanYouPlayTheArchieTheme" onclick="showQuestionCanYouPlayTheFullVersionOfArchieTheme()">
+      <input type="radio" name="RadioCanYouPlayTheArchieTheme" onclick="showSentence('CanYouPlayTheFullVersionOfArchieTheme')">
       Of course, that's one of the most epic themes of all time.
     </label> 
   </div>
 </div>
 
-<div class="validator-container" id="QuestionCanYouPlayTheFullVersionOfArchieTheme" style="display: none;">
+<div class="validator-container" id="CanYouPlayTheFullVersionOfArchieTheme" style="display: none;">
   <div class="validator-question">Absolutely. Can you play the full version of the theme on your instrument?</div>
   <div class="validator-answer">
     <label>
-      <input type="radio" name="RadioQuestionCanYouPlayTheArchieTheme" onclick="showOnlyKnowsTheShortVersionOfArchieTheme()">
+      <input type="radio" name="RadioCanYouPlayTheFullVersionOfArchieTheme" onclick="showSentence('OnlyKnowsTheShortVersionOfArchieTheme')">
       Oh, no. I'm only familiar with the short version.
     </label>
     <label>
-      <input type="radio" name="RadioCanYouPlayTheArchieTheme" onclick="showHighChancesOfAdmission()">
+      <input type="radio" name="RadioCanYouPlayTheFullVersionOfArchieTheme" onclick="showSentence('CanReadSheetMusic')">
       Hell yeah, I play that version regularly, with my eyes closed.
     </label> 
   </div>
 </div>
 
+<div class="validator-container" id="CanReadSheetMusic" style="display: none;">
+  <div class="validator-question">Good to hear. Can you read sheet music?</div>
+  <div class="validator-answer">
+    <label>
+      <input type="radio" name="RadioCanReadSheetMusic" onclick="showSentence('CanHearComplexChords')">
+      I don't, but hear me out, I play stuff by ear.
+    </label>
+    <label>
+      <input type="radio" name="RadioCanReadSheetMusic" onclick="showSentence('CanReadComplexScores')">
+      Pff, yeah? Yes I read sheet music.
+    </label> 
+  </div>
 </div>
+
+<div class="validator-container" id="CanHearComplexChords" style="display: none;">
+  <div class="validator-question">Interesting. Can you decipher complex chords, and ideally transcribe the average Tom arrangement with 93% accuracy?</div>
+  <div class="validator-answer">
+    <label>
+      <input type="radio" name="RadioCanHearComplexChords" onclick="showSentence('FailCanHearComplexChords')">
+      That I can not do. Tom puts too many instruments.
+    </label>
+    <label>
+      <input type="radio" name="RadioCanHearComplexChords" onclick="showSentence('IsAsGoodAsTom')">
+      Yeah baby, I got a pair of golden ears over here.
+    </label> 
+  </div>
+</div>
+
+<div class="validator-container" id="CanReadComplexScores" style="display: none;">
+  <div class="validator-question">You sounded quite confident there. Can you sightread frighteningly complex scores in odd time signatures and make out Tom's hieroglypical scribblings on the chalkboard in .2 nanoseconds?</div>
+  <div class="validator-answer">
+    <label>
+      <input type="radio" name="RadioCanReadComplexScores" onclick="showSentence('FailCanReadComplexScores')">
+      Oh, no no no. I didn't mean it like that.
+    </label>
+    <label>
+      <input type="radio" name="RadioCanReadComplexScores" onclick="showSentence('IsAsGoodAsTom')">
+      I don't think you get it. You're talking to a sheet music prodigy.
+    </label> 
+  </div>
+</div>
+
+<div class="validator-container" id="IsAsGoodAsTom" style="display: none;">
+  <div class="validator-question">I see. Interesting. Do you think you are as good as Tom?</div>
+  <div class="validator-answer">
+    <label>
+      <input type="radio" name="RadioIsAsGoodAsTom" onclick="showSentence('LikesTom')">
+      Haha, not even close. That would be cool though. But yeah, no, Tom is way better than me.
+    </label>
+    <label>
+      <input type="radio" name="RadioIsAsGoodAsTom" onclick="showSentence('FailIsAsGoodAsTom')">
+      Hmm... You know what? I'm gonna go all out and say yes, I'm as good as Tom in that skill! Maybe a bit better even!
+    </label> 
+  </div>
+</div>
+
+<div class="validator-container" id="LikesTom" style="display: none;">
+  <div class="validator-question">That's totally fine, no one matches Tom's ears. (Seriously, how do they work?) Alright, final question: do you like Tom?</div>
+  <div class="validator-answer">
+    <label>
+      <input type="radio" name="RadioLikesTom" onclick="showSentence('FailLikesTom')">
+      Nah, I hate that guy!
+    </label>
+    <label>
+      <input type="radio" name="RadioLikesTom" onclick="showSentence('HighChancesOfAdmission')">
+      I freaking love Tom! He's such a cool guy!
+    </label> 
+  </div>
+</div>
+
+
 
 
 
 <!-- Sorry messages. -->
-<div class="validator-container" id="QuestionYouNeedToPlayInstrument" style="display: none;">
+<div class="validator-container" id="YouNeedToPlayInstrument" style="display: none;">
   <div class="validator-question">We're sorry, you need to play an instrument to enter this school.</div>
-    <a href=""><div class="generic-link-button">Retry</div></a>
+  <a href=""><div class="generic-link-button">Retry</div></a>
 </div>
 
-<div class="validator-container" id="QuestionYouNeedMoreRepertoire" style="display: none;">
+<div class="validator-container" id="YouNeedMoreRepertoire" style="display: none;">
   <div class="validator-question">While Tom greatly appreciates the classics, such as Mary Had A Little Lamb, he would not be satisfied with such narrow repertoire. You need to add more tunes to your arsenal to impress Tom.</div>
-    <a href=""><div class="generic-link-button">Retry</div></a>
+  <a href=""><div class="generic-link-button">Retry</div></a>
 </div>
 
-<div class="validator-container" id="QuestionSloppyPlaying" style="display: none;">
+<div class="validator-container" id="SloppyPlaying" style="display: none;">
   <div class="validator-question">Tom does have a class where you learn to butcher classical music, but when it comes to auditions, he places the utmost importance on accurate musical performance, including tempo, dynamics, phrasing, articulation and so forth. Come back when you have truly mastered the 3rd movement of the Moonlight Sonata.</div>
-    <a href=""><div class="generic-link-button">Retry</div></a>
+  <a href=""><div class="generic-link-button">Retry</div></a>
 </div>
 
 <div class="validator-container" id="NeverHeardOfArchieTheme" style="display: none;">
   <div class="validator-question">While technical proficiency in the tune "Giant Steps" may make you a favorite in Tom's eyes, ignorance of such a classic as the "Archie theme" can only yield poor results and damage your image. It's almost as bad as not knowing Tom's "Untitled theme".</div>
-    <a href=""><div class="generic-link-button">Retry</div></a>
+  <a href=""><div class="generic-link-button">Retry</div></a>
 </div>
 
 <div class="validator-container" id="OnlyKnowsTheShortVersionOfArchieTheme" style="display: none;">
   <div class="validator-question">Sadly, it is not acceptable to not be familiar with the extended orchestral version of the Archie theme, scored by Tom. It would be disrespectful to the orchestrator to not know perhaps the definitive version of this theme.</div>
-    <a href=""><div class="generic-link-button">Retry</div></a>
+  <a href=""><div class="generic-link-button">Retry</div></a>
+</div>
+
+<div class="validator-container" id="FailCanHearComplexChords" style="display: none;">
+  <div class="validator-question">You fail. Not because of your ears, but because there is no such thing as "too many instruments" for a maestro like Tom. Next!</div>
+  <a href=""><div class="generic-link-button">Retry</div></a>
+</div>
+
+<div class="validator-container" id="FailCanReadComplexScores" style="display: none;">
+  <div class="validator-question">Well, you overhyped your skill level by saying "Pff". Thank you, next!</div>
+  <a href=""><div class="generic-link-button">Retry</div></a>
+</div>
+
+<div class="validator-container" id="FailIsAsGoodAsTom" style="display: none;">
+  <div class="validator-question">Wrong, no one is as good as Tom. Next candidate!</div>
+  <a href=""><div class="generic-link-button">Retry</div></a>
+</div>
+
+<div class="validator-container" id="FailLikesTom" style="display: none;">
+  <div class="validator-question">*Sob.*</div>
+  <img src="crying-cat.jpg" width="800" height="450" alt="Crying cat meme.">
+  <a href=""><div class="generic-link-button">Meaw</div></a>
 </div>
 
 <!-- Success. -->
@@ -227,6 +262,8 @@
 <div class="validator-container" id="HighChancesOfAdmission" style="display: none;">
   <div class="validator-question">Your chances of admission to Tom's Music School seem high. Keep it up and one day you may be studying with the maestro.</div>
     <a href=""><div class="generic-link-button">Go back to TMS Validator</div></a>
+</div>
+
 </div>
 
 
